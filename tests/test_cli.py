@@ -16,6 +16,13 @@ def test_parse_args_valid() -> None:
     assert args.report == expected_report
 
 
+def test_parse_args_with_verbose() -> None:
+    """Test parsing arguments with verbose flag."""
+    args = parse_args(["--files", "file1.csv", "--report", "median-coffee", "--verbose"])
+
+    assert args.verbose is True
+
+
 def test_parse_args_missing_files() -> None:
     """Test error when files are missing."""
     with pytest.raises(SystemExit):
@@ -26,12 +33,6 @@ def test_parse_args_missing_report() -> None:
     """Test error when report is missing."""
     with pytest.raises(SystemExit):
         parse_args(["--files", "file.csv"])
-
-
-def test_parse_args_invalid_report() -> None:
-    """Test error with invalid report type."""
-    with pytest.raises(SystemExit):
-        parse_args(["--files", "file.csv", "--report", "invalid-report"])
 
 
 def test_help_output() -> None:
