@@ -28,7 +28,7 @@ select = ["ALL"]
 # T — типы (Type Checking)
 
 extend-ignore = ["E203"] 
-ignore = ["D203", "D213", "COM812"]
+ignore = ["D203", "D213", "COM812", "S101"]
 extend-select = []
 allowed-confusables = [
     "А", "В", "С", "Е", "Н", "К", "М", "О", "Р", "Т", "Х", "Ь", "Ы", "І", "Ј", "Ӏ",
