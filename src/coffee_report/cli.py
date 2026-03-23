@@ -64,15 +64,15 @@ def main() -> NoReturn:
     logger = logging.getLogger(__name__)
 
     try:
-        logger.info("Starting coffee consumption report generation")
+        logger.debug("Starting coffee consumption report generation")
         logger.debug("Files to process: %s", args.files)
         logger.debug("Report type: %s", args.report)
 
         app = CoffeeReportApp()
         output = app.run(files=args.files, report_name=args.report)
 
-        logger.info("Report generation completed successfully")
-        logger.info("\n%s", output)
+        logger.debug("Report generation completed successfully")
+        print(output) # noqa: T201
 
     except ReportNotFoundError as e:
         error_msg = f"Report not found: {e}"

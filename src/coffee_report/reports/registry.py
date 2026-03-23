@@ -5,10 +5,10 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from coffee_report.domain.exceptions import ReportNotFoundError
-from coffee_report.reports.median_coffee import MedianCoffeeReport
+from coffee_report.reports import MedianCoffeeReport
 
 if TYPE_CHECKING:
-    from coffee_report.reports.base import BaseReport
+    from coffee_report.reports import BaseReport
 
 
 def default_registry() -> dict[str, BaseReport]:

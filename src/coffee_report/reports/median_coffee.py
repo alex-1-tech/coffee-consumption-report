@@ -5,7 +5,7 @@ from __future__ import annotations
 from statistics import median
 from typing import TYPE_CHECKING, Sequence
 
-from coffee_report.reports.base import BaseReport
+from coffee_report.reports import BaseReport
 
 if TYPE_CHECKING:
     from coffee_report.domain.models import StudentRecord
