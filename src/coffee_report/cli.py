@@ -1,4 +1,5 @@
 """Command-line interface for coffee consumption report generation."""
+from __future__ import annotations
 
 import argparse
 import logging
