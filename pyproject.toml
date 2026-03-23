@@ -36,3 +36,7 @@ allowed-confusables = [
     "Α", "Β", "Ε", "Ζ", "Η", "Ι", "Κ", "Μ", "Ν", "Ο", "Ρ", "Τ", "Υ", "Χ",
     "α", "β", "ε", "ζ", "η", "ι", "κ", "ν", "ο", "ρ", "τ", "υ", "χ"
 ]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
